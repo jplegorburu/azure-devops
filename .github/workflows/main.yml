@@ -19,7 +19,10 @@ jobs:
       - name: Set up Python 3.7.10
         uses: actions/setup-python@v1
         with:
-          python-version: 3.7.10    
+          python-version: 3.7.10
+      - name: Install dependencies
+        run: |
+          make install
       - name: Lint with pylint
         run: |
           make lint
